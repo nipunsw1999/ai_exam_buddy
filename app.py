@@ -3,27 +3,57 @@ import streamlit as st
 # Dummy quiz data
 quiz_data = {
     1: {
-        "question": "What is the capital of France?",
-        "answers": ["Paris", "Berlin", "Madrid", "Rome"],
-        "correct_answers": ["Paris"],
-        "explanation": "Paris is the capital of France.",
+        "question": "What is supervised learning?",
+        "answers": [
+            "A type of learning where the model learns from labeled data",
+            "A type of learning where the model learns from unlabeled data",
+            "A type of learning that does not involve data",
+            "A type of learning focused only on clustering",
+        ],
+        "correct_answers": ["A type of learning where the model learns from labeled data"],
+        "explanation": "Supervised learning involves training a model on labeled data, where each input is paired with its corresponding output.",
         "status": "NO",
     },
     2: {
-        "question": "What is 2 + 2?",
-        "answers": ["3", "4", "5", "6"],
-        "correct_answers": ["4"],
-        "explanation": "The answer is 4 because 2 + 2 equals 4.",
+        "question": "Which of the following are examples of machine learning algorithms?",
+        "answers": ["Linear Regression", "K-Means Clustering", "Decision Trees", "WordPress"],
+        "correct_answers": ["Linear Regression", "K-Means Clustering", "Decision Trees"],
+        "explanation": "Linear Regression, K-Means Clustering, and Decision Trees are machine learning algorithms, while WordPress is a content management system.",
         "status": "NO",
     },
     3: {
-        "question": "Select the programming languages:",
-        "answers": ["Python", "English", "Java", "C++"],
-        "correct_answers": ["Python", "Java", "C++"],
-        "explanation": "Programming languages are Python, Java, and C++.",
+        "question": "What is overfitting in machine learning?",
+        "answers": [
+            "When the model performs well on training data but poorly on unseen data",
+            "When the model performs equally well on both training and unseen data",
+            "When the model fails to learn from the data",
+            "When the model focuses on irrelevant features",
+        ],
+        "correct_answers": ["When the model performs well on training data but poorly on unseen data"],
+        "explanation": "Overfitting occurs when a model learns the training data too well, including noise, resulting in poor generalization to new data.",
+        "status": "NO",
+    },
+    4: {
+        "question": "Which of the following are types of neural networks?",
+        "answers": ["Convolutional Neural Networks (CNN)", "Recurrent Neural Networks (RNN)", "Support Vector Machines (SVM)", "Feedforward Neural Networks"],
+        "correct_answers": ["Convolutional Neural Networks (CNN)", "Recurrent Neural Networks (RNN)", "Feedforward Neural Networks"],
+        "explanation": "CNN, RNN, and Feedforward Neural Networks are types of neural networks, while SVM is a different machine learning algorithm.",
+        "status": "NO",
+    },
+    5: {
+        "question": "What is the purpose of a validation dataset in machine learning?",
+        "answers": [
+            "To train the model",
+            "To test the model's performance on unseen data",
+            "To tune the model's hyperparameters",
+            "To replace the training dataset",
+        ],
+        "correct_answers": ["To tune the model's hyperparameters"],
+        "explanation": "A validation dataset is used to fine-tune hyperparameters and avoid overfitting without touching the test dataset.",
         "status": "NO",
     },
 }
+
 
 # Initialize session state for answers
 if 'given_answers' not in st.session_state:
